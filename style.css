@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Kumbh Sans", sans-serif;
-    color: var(--secondary-clr);
+    color: var(--dark-clr);
     background-color: currentColor;
 }
 
@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 32px currentColor;
+    cursor: pointer;
 }
 
 .first-circle {
@@ -36,39 +37,49 @@ body {
     height: 250px;
     color: var(--primary-clr);
     background-color: currentColor;
-    box-shadow: 0px 0px 32px currentColor;
-}
-
-.first-circle:hover {
-    animation: 1150ms pulse ease-in-out infinite;
 }
 
 .second-circle {
-    width: 200px;
-    height: 200px;
-    color: var(--light-clr);
+    width: 250px;
+    height: 250px;
+    color: var(--secondary-clr);
     background-color: currentColor;
-    box-shadow: 0px 0px 32px currentColor;
     position: absolute;
+}
+
+.first-icon {
+    color: var(--dark-clr);
+    width: 40%;
+}
+
+.second-icon {
+    color: var(--dark-clr);
+    width: 40%;
+}
+
+/* Utility classes */
+.color--light {
+    color: var(--light-clr);
+}
+
+.display--none {
     display: none;
 }
 
-span {
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
+.animation--reverse-pulse {
+    z-index: -1;
+    animation: 2000ms reversePulse ease-in-out forwards;
 }
 
-.first-span {
-    color: var(--dark-clr);
-    width: 75%;
+.animation--inner-pulse {
+    animation: 2000ms innerPulse ease-in-out forwards;
 }
 
-.second-span {
-    color: var(--dark-clr);
-    width: 75%;
+.animation--pulse {
+    animation: 1150ms pulse ease-in-out infinite;
 }
 
+/* Animations */
 @keyframes pulse {
     0% {transform: scale(1)}
     10% {transform: scale(1.05);}
@@ -88,4 +99,11 @@ span {
     80% {transform: scale(0.6);}
     90% {transform: scale(1.1);}
     100% {transform: scale(1);}
+}
+
+@keyframes reversePulse {
+    0% {transform-origin: center; transform: scale(1);}
+    15% {transform: scale(1.1);}
+    25% {transform: scale(0.1);}
+    100% {transform: scale(0);}
 }
