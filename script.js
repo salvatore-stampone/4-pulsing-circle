@@ -1,8 +1,6 @@
 const body = document.querySelector('body');
 const firstCircle = document.querySelector('.first-circle');
-const firstIcon = document.querySelector('.first-icon');
 const secondCircle = document.querySelector('.second-circle');
-const secondIcon = document.querySelector('.second-icon')
 
 firstCircle.addEventListener('click', () => {
     body.classList.add('color--light');

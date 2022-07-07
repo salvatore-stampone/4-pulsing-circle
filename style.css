@@ -24,6 +24,8 @@ body {
 }
 
 .circle {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -33,27 +35,17 @@ body {
 }
 
 .first-circle {
-    width: 250px;
-    height: 250px;
     color: var(--primary-clr);
     background-color: currentColor;
 }
 
 .second-circle {
-    width: 250px;
-    height: 250px;
     color: var(--secondary-clr);
     background-color: currentColor;
     position: absolute;
 }
 
-.first-icon {
-    color: var(--dark-clr);
-    width: 40%;
-}
-
-.second-icon {
-    color: var(--dark-clr);
+.first-icon, .second-icon {
     width: 40%;
 }
 
